@@ -2,10 +2,10 @@ version: "3"
 services:
   api:
     restart: always
-    build: .
-    container_name: 'python3-minimum'
-    ports:
-      - "80:80"
+    build:
+      context: .
+      dockerfile: .devcontainer/Dockerfile
+    container_name: "python-movie"
     tty: true
     volumes:
       - "./src:/app/src"
